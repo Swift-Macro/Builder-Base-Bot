@@ -15,7 +15,10 @@ https://www.youtube.com/watch?v=-YHt_uz3noI by BDLegend.
 Download and run the `.exe` file from the latest release.
 
 ### Option 2 (Python)
-If you clone the repository, install dependencies with: pip install -r requirements.txt
+If you clone the repository, install dependencies with: 
+
+pip install -r requirements.txt
+
 Then run: python BuilderBaseGui.py
 
 ## Download
