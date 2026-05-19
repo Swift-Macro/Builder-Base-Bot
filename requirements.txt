@@ -1,0 +1,4 @@
+pyside6
+pyautogui
+keyboard
+opencv-python
