@@ -8,7 +8,6 @@ https://www.youtube.com/watch?v=-YHt_uz3noI by BDLegend.
 - Screen resolution must be set to **1920x1080**
 - Must be on the **primary monitor**
 - If needed, you can replace the images in the `Images/BuilderBaseImages` folder with your own screenshots for better accuracy or if you are using a different resolution
-- If it doesn’t collect the Elixir Cart loot, make sure your base is close to it.
 
 ## How to use
 
