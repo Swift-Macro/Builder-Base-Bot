@@ -35,12 +35,18 @@ def StartBot():
             if not running:
                 return
 
+        FindAndClickImage(goldStorageImage)
+        py.moveTo(960, 540)
+        py.dragRel(-50, 200, 0.2)
+        time.sleep(1.5)
+
         if FindAndClickImage(elixirCartImage, 1) or FindAndClickImage(elixirCartImage2, 1):
             time.sleep(1)
             if not running:
                 return
             py.click(1403, 917)
             py.click(1610, 115)
+
 
 def AttackingBase():
     if FindAndClickImage(battleStartsImage, searchingBaseTime):
@@ -132,3 +138,4 @@ returnHomeButton = r"Images\BuilderBaseImages\returnHomeButton.png"
 okayButtonImage = r"Images\BuilderBaseImages\okayButton.png"
 elixirCartImage = r"Images\BuilderBaseImages\elixirCartImage.png"
 elixirCartImage2 = r"Images\BuilderBaseImages\elixirCartImage2.png"
+goldStorageImage = r"Images\BuilderBaseImages\goldStorageImage.png"
