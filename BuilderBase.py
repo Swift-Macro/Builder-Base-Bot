@@ -38,7 +38,7 @@ def StartBot():
         FindAndClickImage(goldStorageImage)
         py.moveTo(960, 540)
         py.dragRel(-50, 200, 0.2)
-        time.sleep(1.5)
+        time.sleep(1)
 
         if FindAndClickImage(elixirCartImage, 1) or FindAndClickImage(elixirCartImage2, 1):
             time.sleep(1)
