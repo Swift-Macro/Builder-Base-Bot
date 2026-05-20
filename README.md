@@ -1,7 +1,7 @@
 # Builder-Base-Bot
 This is a standalone Builder Base macro made by Swift Macro. It is designed for Google Play Games on PC. It uses PyAutoGUI, so it will control your mouse.
 
-The bot automatically stops an attack once it reaches 2 stars or after 45 seconds have passed. It is based on the video:
+The bot automatically stops an attack once it reaches 2 stars or after 45 seconds have passed (Time can be adjusted when running the program). It is based on the video:
 https://www.youtube.com/watch?v=-YHt_uz3noI by BDLegend.
 
 ## Requirements
