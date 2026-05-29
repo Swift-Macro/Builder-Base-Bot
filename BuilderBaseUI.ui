@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
+    <width>1000</width>
     <height>500</height>
    </rect>
   </property>
@@ -18,13 +18,13 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>900</width>
+    <width>1000</width>
     <height>500</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>900</width>
+    <width>1000</width>
     <height>500</height>
    </size>
   </property>
@@ -75,7 +75,7 @@ QListWidget::item {
     <property name="bottomMargin">
      <number>0</number>
     </property>
-    <property name="verticalSpacing">
+    <property name="spacing">
      <number>0</number>
     </property>
     <item row="0" column="0" rowspan="2">
@@ -244,9 +244,289 @@ QListWidget::item {
        <widget class="QWidget" name="mainContent" native="true">
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
+          <widget class="QFrame" name="storageSettingsFrame">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#storageSettingsFrame {
+    background-color: rgba(90, 55, 28, 235);
+
+    border-radius: 16px;
+    border: 3px solid #2b1a0f;
+
+    /* lighting illusion */
+    border-top-color: #7a4d28;
+    border-left-color: #7a4d28;
+    border-bottom-color: #140c06;
+    border-right-color: #140c06;
+}
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Shadow::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="lootSettingsLayout">
+            <item>
+             <widget class="QLabel" name="storageSettingsLabel">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: rgba(90, 55, 28, 235);
+
+    border-radius: 16px;
+    border: 3px solid #2b1a0f;
+
+    /* lighting illusion */
+    border-top-color: #7a4d28;
+    border-left-color: #7a4d28;
+    border-bottom-color: #140c06;
+    border-right-color: #140c06;
+}</string>
+              </property>
+              <property name="text">
+               <string>Storage Capacity</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="leftMarginLayout">
+              <property name="leftMargin">
+               <number>15</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="maxGoldlbl">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+    color: white;
+    font-weight: bold;
+
+	border: none;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Max Gold:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="goldLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>9</pointsize>
+                  <underline>false</underline>
+                 </font>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>false</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    background-color: rgba(0,0,0,140);
+    border-radius: 8px;
+    border: 2px solid #3b2414;
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="frame">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Policy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="elixerlbl">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+    color: white;
+    font-weight: bold;
+
+	border: none;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Max Elixer:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="elixerLineEdit">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>100</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit {
+    background-color: rgba(0,0,0,140);
+    border-radius: 8px;
+    border: 2px solid #3b2414;
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Orientation::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Policy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
           <widget class="QFrame" name="troopConfiguration">
            <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
@@ -597,6 +877,11 @@ QListWidget::item:selected {
                     <string>Bomber</string>
                    </property>
                   </item>
+                  <item>
+                   <property name="text">
+                    <string>Night Witch</string>
+                   </property>
+                  </item>
                  </widget>
                 </item>
                 <item>
@@ -721,24 +1006,27 @@ QSpinBox::down-button:pressed {
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QCheckBox" name="heroMachineCheckBox">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>140</width>
-                    <height>100</height>
-                   </size>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QCheckBox {
+                 <widget class="QWidget" name="widget_2" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout">
+                   <item>
+                    <widget class="QCheckBox" name="heroMachineCheckBox">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>200</width>
+                       <height>100</height>
+                      </size>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QCheckBox {
     spacing: 6px;
 }
 
@@ -757,10 +1045,56 @@ QCheckBox::indicator:checked {
     background-color: #66bb6a;
     border: 2px solid #1b5e20;
 }</string>
-                  </property>
-                  <property name="text">
-                   <string>Has Hero Machine</string>
-                  </property>
+                     </property>
+                     <property name="text">
+                      <string>Has Hero Machine</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="allWallsCheckBox">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>200</width>
+                       <height>100</height>
+                      </size>
+                     </property>
+                     <property name="cursor">
+                      <cursorShape>PointingHandCursor</cursorShape>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QCheckBox {
+    spacing: 6px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;   /* half of width/height = perfect circle */
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #3b2414;
+    border: 2px solid #1a0f07;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #66bb6a;
+    border: 2px solid #1b5e20;
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>All Walls Above Level 5</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </widget>
                 </item>
                 <item>
@@ -780,116 +1114,6 @@ QCheckBox::indicator:checked {
                  </spacer>
                 </item>
                </layout>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="QFrame" name="startBotFrame_2">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>100</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>100</height>
-            </size>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">#startBotFrame_2 {
-    background-color: rgba(90, 55, 28, 235);
-
-    border-radius: 16px;
-    border: 3px solid #2b1a0f;
-
-    /* lighting illusion */
-    border-top-color: #7a4d28;
-    border-left-color: #7a4d28;
-    border-bottom-color: #140c06;
-    border-right-color: #140c06;
-}</string>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::Shape::StyledPanel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Shadow::Raised</enum>
-           </property>
-           <layout class="QVBoxLayout" name="verticalLayout_14">
-            <item>
-             <layout class="QVBoxLayout" name="startAttackLayout_2">
-              <item>
-               <widget class="QPushButton" name="startBuilderBotBtn">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>16</pointsize>
-                  <bold>true</bold>
-                 </font>
-                </property>
-                <property name="cursor">
-                 <cursorShape>PointingHandCursor</cursorShape>
-                </property>
-                <property name="styleSheet">
-                 <string notr="true">/* ======================
-   ATTACK BUTTON (GREEN)
-====================== */
-
-QPushButton {
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 10px;
-    padding: 8px;
-    font-weight: bold;
-    border: 3px solid #2e7d32;
-}
-
-
-/* hover */
-QPushButton:hover {
-    background-color: #66cc66;
-}
-
-
-/* pressed (clicking) */
-QPushButton:pressed {
-    background-color: #2e7d32;
-
-    /* push-down effect */
-    padding-top: 10px;
-    padding-bottom: 6px;
-}
-
-
-/* stays highlighted when active */
-QPushButton#attackButton:checked {
-    background-color: #43a047;
-    border: 3px solid #a5d6a7;
-}</string>
-                </property>
-                <property name="text">
-                 <string>Start Bot</string>
-                </property>
-                <property name="checkable">
-                 <bool>false</bool>
-                </property>
-               </widget>
               </item>
              </layout>
             </item>
@@ -1260,20 +1484,364 @@ QSlider::tick-mark:horizontal {
           </widget>
          </item>
          <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Orientation::Horizontal</enum>
+          <widget class="QFrame" name="botOptionsFrame">
+           <property name="styleSheet">
+            <string notr="true">#botOptionsFrame {
+    background-color: rgba(90, 55, 28, 235);
+
+    border-radius: 16px;
+    border: 3px solid #2b1a0f;
+
+    /* lighting illusion */
+    border-top-color: #7a4d28;
+    border-left-color: #7a4d28;
+    border-bottom-color: #140c06;
+    border-right-color: #140c06;
+}</string>
            </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Policy::Fixed</enum>
+           <property name="frameShape">
+            <enum>QFrame::Shape::StyledPanel</enum>
            </property>
-           <property name="sizeHint" stdset="0">
+           <property name="frameShadow">
+            <enum>QFrame::Shadow::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="botOptionslbl">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    background-color: rgba(90, 55, 28, 235);
+
+    border-radius: 16px;
+    border: 3px solid #2b1a0f;
+
+    /* lighting illusion */
+    border-top-color: #7a4d28;
+    border-left-color: #7a4d28;
+    border-bottom-color: #140c06;
+    border-right-color: #140c06;
+}</string>
+              </property>
+              <property name="text">
+               <string>Bot Options</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="maxWallsBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+
+    /* Warm orange gradient */
+    background-color: qlineargradient(
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:0 #F7B24D,
+        stop:0.5 #E98A2A,
+        stop:1 #C86A1A
+    );
+
+    color: #FFFFFF;
+
+    /* Thick dark brown border */
+    border: 4px solid #6A3B12;
+    border-radius: 16px;
+
+    /* Slight inner feel */
+    padding: 10px 16px;
+
+    font-weight: bold;
+}
+
+
+/* HOVER — brighter, more golden */
+QPushButton:hover {
+
+    background-color: qlineargradient(
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:0 #FFC766,
+        stop:0.5 #F29A33,
+        stop:1 #D9781F
+    );
+}
+
+
+/* PRESSED — darker + pressed depth */
+QPushButton:pressed {
+
+    background-color: qlineargradient(
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:0 #C86A1A,
+        stop:0.5 #A95514,
+        stop:1 #7F3E0E
+    );
+
+    /* Push-down effect */
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+
+/* CHECKED — highlighted */
+QPushButton:checked {
+
+    background-color: qlineargradient(
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:0 #FFD27A,
+        stop:0.5 #F2A23D,
+        stop:1 #C86A1A
+    );
+
+    border: 4px solid #FFD27A;
+}</string>
+              </property>
+              <property name="text">
+               <string>Max Walls</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="fillStoragesBtn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton {
+
+    /* Warm orange gradient */
+    background-color: qlineargradient(
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:0 #F7B24D,
+        stop:0.5 #E98A2A,
+        stop:1 #C86A1A
+    );
+
+    color: #FFFFFF;
+
+    /* Thick dark brown border */
+    border: 4px solid #6A3B12;
+    border-radius: 16px;
+
+    /* Slight inner feel */
+    padding: 10px 16px;
+
+    font-weight: bold;
+}
+
+
+/* HOVER — brighter, more golden */
+QPushButton:hover {
+
+    background-color: qlineargradient(
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:0 #FFC766,
+        stop:0.5 #F29A33,
+        stop:1 #D9781F
+    );
+}
+
+
+/* PRESSED — darker + pressed depth */
+QPushButton:pressed {
+
+    background-color: qlineargradient(
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:0 #C86A1A,
+        stop:0.5 #A95514,
+        stop:1 #7F3E0E
+    );
+
+    /* Push-down effect */
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+
+
+/* CHECKED — highlighted */
+QPushButton:checked {
+
+    background-color: qlineargradient(
+        x1:0, y1:0,
+        x2:0, y2:1,
+        stop:0 #FFD27A,
+        stop:0.5 #F2A23D,
+        stop:1 #C86A1A
+    );
+
+    border: 4px solid #FFD27A;
+}</string>
+              </property>
+              <property name="text">
+               <string>Fill Storages</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="startBotFrame_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
             <size>
-             <width>246</width>
-             <height>20</height>
+             <width>0</width>
+             <height>100</height>
             </size>
            </property>
-          </spacer>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#startBotFrame_2 {
+    background-color: rgba(90, 55, 28, 235);
+
+    border-radius: 16px;
+    border: 3px solid #2b1a0f;
+
+    /* lighting illusion */
+    border-top-color: #7a4d28;
+    border-left-color: #7a4d28;
+    border-bottom-color: #140c06;
+    border-right-color: #140c06;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Shadow::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <layout class="QVBoxLayout" name="startAttackLayout_2">
+              <item>
+               <widget class="QPushButton" name="startBuilderBotBtn">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>16</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">/* ======================
+   ATTACK BUTTON (GREEN)
+====================== */
+
+QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 10px;
+    padding: 8px;
+    font-weight: bold;
+    border: 3px solid #2e7d32;
+}
+
+
+/* hover */
+QPushButton:hover {
+    background-color: #66cc66;
+}
+
+
+/* pressed (clicking) */
+QPushButton:pressed {
+    background-color: #2e7d32;
+
+    /* push-down effect */
+    padding-top: 10px;
+    padding-bottom: 6px;
+}
+
+
+/* stays highlighted when active */
+QPushButton#attackButton:checked {
+    background-color: #43a047;
+    border: 3px solid #a5d6a7;
+}</string>
+                </property>
+                <property name="text">
+                 <string>Start Bot</string>
+                </property>
+                <property name="checkable">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
          </item>
         </layout>
        </widget>
