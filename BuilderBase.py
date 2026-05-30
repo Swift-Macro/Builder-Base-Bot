@@ -28,7 +28,7 @@ running = True
 deployTroopLocations = [(314, 510), (1370, 221), (845, 36), (542, 193), (777, 843), (1208, 670)]
 slotsLocations = [(418, 963), (544, 963), (670, 963), (796, 963), (922, 963), (1048, 963)]
 
-reader = easyocr.Reader(["en"], gpu=False)
+reader = easyocr.Reader(["en"], gpu=False, model_storage_directory= 'models')
 model = torch.jit.load("digits_model_New_Model.pt")
 CHARS = "0123456789 "
 
