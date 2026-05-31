@@ -24,3 +24,10 @@ Then run: python BuilderBaseGui.py
 
 ## Download
 Latest version: https://github.com/Swift-Macro/Builder-Base-Bot/releases/latest
+
+
+## Known Bugs
+
+### Walls
+
+**Wall rings** can affect the detection of wall levels and cause the program to crash.
