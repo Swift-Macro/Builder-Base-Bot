@@ -142,7 +142,9 @@ def UpgradeWalls(isFullGold, isFullElixir):
 
     if not running:
         return
-
+        
+    wallLevel = CheckWallLevel()
+    
     # Clicking the buttons for upgrading the walls
     FindAndClickImage(upgradeMoreButtonImage)
 
@@ -150,11 +152,12 @@ def UpgradeWalls(isFullGold, isFullElixir):
 
     time.sleep(RandomFloatNumber(1, 2))
 
-    # Checking if it can upgrade 10 walls until it cant on walls below level 6
-    if allWallLevelsAboveFive:
+    # Checking if it can upgrade 10 walls until it cant on walls below level 6, adding later on click on the next wall level bounding box if there is walls below level 6
+    if allWallLevelsAboveFive or wallLevel > 5:
         elixirOffSet = -80
     else:
         elixirOffSet = 0
+        
     if FindAndClickImage(tenMoreWallsImage, 1, clickImage=False, moveToImage=True):
         while True:
             color = py.pixel(x - 143 + elixirOffSet, y)
